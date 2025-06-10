@@ -6,3 +6,8 @@ public class Blog
 
     public List<Post> Posts { get; set; } = new List<Post>();
 }
+
+public class Comment
+{
+    public int CommentId { get; set; }
+}

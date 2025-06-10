@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddTransient<IBlogService, BlogService>();
+builder.Services.AddTransient<BlogService>();
 
 var app = builder.Build();
 

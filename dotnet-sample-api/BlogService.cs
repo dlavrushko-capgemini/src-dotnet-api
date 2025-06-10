@@ -4,12 +4,7 @@ using System.Collections.Generic;
 
 namespace DotnetSampleApi;
 
-public interface IBlogService
-{
-    IEnumerable<Blog> GetBlogs();
-}
-
-public class BlogService : IBlogService
+public class BlogService
 {
     private const int FetchCount = 5;
 
@@ -21,19 +16,12 @@ public class BlogService : IBlogService
     }
 }
 
-public interface IPostsService
+public class PostsService
 {
-    IEnumerable<Post> GetPosts();
-}
-
-public class PostsService : IPostsService
-{
-    private const int FetchCount = 5;
-
     private readonly List<Post> _posts = new List<Post>();
 
     public IEnumerable<Post> GetPosts()
     {
-        return _posts.Take(FetchCount).ToList();
+        return _posts;
     }
 }
